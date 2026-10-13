@@ -1,0 +1,157 @@
+/* SIGEDI · tema institucional I.E. INA 54 – Tambogrande
+   Colores tomados del escudo: verde, amarillo, rojo y dorado. */
+:root {
+    --sg-green: #029340;
+    --sg-green-d: #046a33;
+    --sg-green-dd: #053d22;
+    --sg-yellow: #fef50c;
+    --sg-red: #d7262b;
+    --sg-gold: #c9a55c;
+    --sg-bg: #f2f6f2;
+    --sg-ink: #1d2b22;
+    --bs-body-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --bs-link-color: #046a33;
+    --bs-link-color-rgb: 4, 106, 51;
+    --bs-link-hover-color: #053d22;
+    --bs-link-hover-color-rgb: 5, 61, 34;
+}
+
+body { background: var(--sg-bg); color: var(--sg-ink); }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -.01em; }
+.text-primary { color: var(--sg-green-d) !important; }
+
+/* ---------- Botones y formularios ---------- */
+.btn { border-radius: .6rem; font-weight: 500; }
+.btn-primary {
+    --bs-btn-bg: #046a33; --bs-btn-border-color: #046a33;
+    --bs-btn-hover-bg: #053d22; --bs-btn-hover-border-color: #053d22;
+    --bs-btn-active-bg: #053d22; --bs-btn-active-border-color: #053d22;
+    --bs-btn-disabled-bg: #046a33; --bs-btn-disabled-border-color: #046a33;
+    --bs-btn-focus-shadow-rgb: 4, 106, 51;
+}
+.btn-outline-primary {
+    --bs-btn-color: #046a33; --bs-btn-border-color: #046a33;
+    --bs-btn-hover-bg: #046a33; --bs-btn-hover-border-color: #046a33;
+    --bs-btn-active-bg: #046a33; --bs-btn-active-border-color: #046a33;
+    --bs-btn-focus-shadow-rgb: 4, 106, 51;
+}
+.form-control, .form-select { border-radius: .6rem; }
+.form-control:focus, .form-select:focus {
+    border-color: var(--sg-green);
+    box-shadow: 0 0 0 .22rem rgba(2, 147, 64, .18);
+}
+.form-check-input:checked { background-color: #046a33; border-color: #046a33; }
+.pagination {
+    --bs-pagination-color: #046a33; --bs-pagination-hover-color: #053d22;
+    --bs-pagination-active-bg: #046a33; --bs-pagination-active-border-color: #046a33;
+    --bs-pagination-focus-box-shadow: 0 0 0 .22rem rgba(2, 147, 64, .18);
+}
+
+/* ---------- Tarjetas, tablas, insignias de estado ---------- */
+.card {
+    border: 0; border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(5, 61, 34, .06), 0 8px 22px rgba(5, 61, 34, .06);
+}
+.table-light {
+    --bs-table-bg: #e8f2ea; --bs-table-color: var(--sg-green-dd);
+    --bs-table-border-color: #cfe3d3;
+}
+.table > thead th {
+    font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700;
+    border-bottom: 2px solid var(--sg-green);
+}
+.table-hover > tbody > tr:hover > * { --bs-table-hover-bg: #f1f8f2; }
+.badge { font-weight: 600; letter-spacing: .01em; padding: .45em .75em; border-radius: 999px; }
+.alert { border: 0; border-radius: .8rem; border-left: 5px solid; }
+.alert-success { border-left-color: var(--sg-green); }
+.alert-danger { border-left-color: var(--sg-red); }
+
+/* ---------- Barra superior ---------- */
+.sg-navbar { background: linear-gradient(90deg, var(--sg-green-dd), var(--sg-green-d)); padding: .55rem 0; }
+.sg-stripe {
+    height: 5px;
+    background: linear-gradient(90deg, var(--sg-red) 0 33.33%, var(--sg-yellow) 33.33% 66.66%, var(--sg-green) 66.66% 100%);
+}
+.sg-brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: #fff; }
+.sg-brand:hover { color: #fff; }
+.sg-brand img { height: 46px; width: auto; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .35)); }
+.sg-brand-name { font-size: 1.35rem; font-weight: 800; letter-spacing: .08em; line-height: 1; }
+.sg-brand-sub { display: block; white-space: nowrap; font-size: .68rem; font-weight: 500; opacity: .8; letter-spacing: .02em; margin-top: .2rem; }
+.sg-navbar .nav-link {
+    color: rgba(255, 255, 255, .85); border-radius: .55rem; padding: .45rem .9rem !important; font-weight: 500;
+    display: flex; align-items: center; gap: .4rem;
+}
+.sg-navbar .nav-link:hover { background: rgba(255, 255, 255, .12); color: #fff; }
+.sg-navbar .nav-link.active { background: rgba(254, 245, 12, .16); color: var(--sg-yellow); }
+.sg-user { color: #fff; font-size: .85rem; line-height: 1.15; text-align: right; }
+.sg-role {
+    display: inline-block; background: var(--sg-yellow); color: var(--sg-green-dd); font-weight: 700;
+    border-radius: 999px; padding: .1rem .6rem; font-size: .68rem; text-transform: capitalize;
+}
+
+/* ---------- Pie ---------- */
+.sg-footer { color: #5b6b60; font-size: .8rem; }
+.sg-footer img { height: 22px; width: auto; vertical-align: middle; margin-right: .4rem; opacity: .9; }
+
+/* ---------- Panel ---------- */
+.sg-hero {
+    background: radial-gradient(circle at 92% 20%, rgba(254, 245, 12, .22), transparent 38%),
+                linear-gradient(120deg, var(--sg-green-dd), var(--sg-green-d) 70%, var(--sg-green));
+    color: #fff; border-radius: 1.1rem; padding: 1.6rem 1.8rem; position: relative; overflow: hidden;
+    box-shadow: 0 10px 28px rgba(5, 61, 34, .25);
+}
+.sg-hero img { height: 96px; width: auto; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .35)); }
+.sg-hero h1 { font-weight: 800; }
+.sg-stat { padding: 1.1rem 1.2rem; display: flex; align-items: center; gap: .9rem; height: 100%; }
+.sg-stat-icon {
+    width: 48px; height: 48px; border-radius: .9rem; display: grid; place-items: center; font-size: 1.4rem; flex: none;
+}
+.sg-stat-num { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+.sg-stat-lbl { font-size: .78rem; color: #5b6b60; margin-top: .25rem; }
+.sg-mod { transition: transform .15s ease, box-shadow .15s ease; border-top: 4px solid var(--sg-green); }
+a.sg-mod:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(5, 61, 34, .16); }
+.sg-mod.is-yellow { border-top-color: var(--sg-yellow); }
+.sg-mod.is-red { border-top-color: var(--sg-red); }
+.sg-mod-icon { font-size: 1.9rem; color: var(--sg-green-d); }
+
+/* ---------- Inicio de sesión ---------- */
+.sg-login { min-height: 100vh; display: flex; }
+.sg-login-hero {
+    flex: 1 1 52%; color: #fff; display: none; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 3rem; position: relative;
+    background: radial-gradient(circle at 20% 15%, rgba(254, 245, 12, .20), transparent 40%),
+                radial-gradient(circle at 85% 90%, rgba(2, 147, 64, .55), transparent 45%),
+                linear-gradient(160deg, var(--sg-green-dd), var(--sg-green-d));
+}
+.sg-login-hero::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 8px;
+    background: linear-gradient(90deg, var(--sg-red) 0 33.33%, var(--sg-yellow) 33.33% 66.66%, var(--sg-green) 66.66% 100%);
+}
+.sg-login-hero img { width: min(240px, 52%); height: auto; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, .45)); }
+.sg-login-title { font-size: clamp(3rem, 6vw, 4.6rem); font-weight: 800; letter-spacing: .1em; line-height: 1; margin: 1.6rem 0 .5rem; }
+.sg-login-tag { font-size: 1.1rem; font-weight: 500; opacity: .92; max-width: 22rem; }
+.sg-login-school {
+    margin-top: 1.4rem; background: rgba(255, 255, 255, .13); border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 999px; padding: .4rem 1.1rem; font-size: .9rem; font-weight: 600;
+}
+.sg-login-form { flex: 1 1 48%; display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem; }
+.sg-login-box { width: 100%; max-width: 400px; }
+.sg-login-mobile { text-align: center; margin-bottom: 1.4rem; }
+.sg-login-mobile img { height: 92px; width: auto; }
+.sg-login-mobile .sg-login-title { color: var(--sg-green-d); font-size: 2.4rem; margin: .8rem 0 .2rem; }
+@media (min-width: 992px) {
+    .sg-login-hero { display: flex; }
+    .sg-login-mobile { display: none; }
+}
+
+/* ---------- Sprint 4: línea de tiempo de la bitácora (HU13-HU15) ---------- */
+.sg-timeline { position: relative; }
+.sg-timeline-item { position: relative; display: flex; gap: .85rem; padding: 0 0 1rem 0; }
+.sg-timeline-item:not(:last-child)::before {
+    content: ""; position: absolute; left: 1.05rem; top: 2.2rem; bottom: .2rem;
+    width: 2px; background: #e3ebe5;
+}
+.sg-timeline-dot {
+    flex: 0 0 2.1rem; width: 2.1rem; height: 2.1rem; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center; font-size: .95rem;
+}
